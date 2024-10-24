@@ -1,11 +1,14 @@
 <?php
 
+include("service/database.php");
+
 if(isset($_POST['login'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +18,10 @@ if(isset($_POST['login'])){
 </head>
 <body>
     <h3>Login!</h3>
-    <form action="login">
+    <form action="login.php" method="$_POST">
         <input type="text" name="username">
         <input type="password" name="password">
-        <input type="submit" name="submit">
+        <input type="submit" name="login">
     </form>
 </body>
 </html>
